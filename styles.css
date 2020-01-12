@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  background-color: hsl(240, 78%, 98%);
+  background-image: url("bg-top.svg"), url("bg-bottom.svg");
+  background-position: top right, bottom left;
+  background-repeat: no-repeat;
+background-size: contain;
+font-family: 'Montserrat' , sans-serif;
+}
+.page_wrapper {  
+ /* background-color: hsl(237, 63%, 64%) ;
+ background-image:  url("images/bg-bottom.svg"); */
+}
+.card {
+  width: 90%;
+  margin: 8% auto;
+  background-color: #eea849;
+  border-radius: 20px;
+  box-shadow: 1px 1px 6px 4px #d4e9e9;
+}
+.storage p {
+  margin: auto;
+    width: 70%;
+  border-top: 1px solid black;
+  padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.container {
+  padding-bottom: 10%;
+}
+
+.card input[type="button"] {
+  width: 75%;
+  height: 7vh;
+  font-size: 15px;
+    font-weight: 700;
+    background-color:  hsl(237, 63%, 64%);
+    border-radius: 10px;
+   /* border: 1px solid  hsl(237, 63%, 64%); */
+    color: white;
+}
+
+.basic input[type="button"]:hover,
+.master input[type="button"]:hover {
+color:hsl(237, 63%, 64%); 
+background-color: white;  
+}
+span.dollar {
+  font-size: 0.5em;
+}
+.professional input[type="button"]:hover {
+  background-color:hsl(237, 63%, 64%); 
+color: white;  
+}
+
+.professional {
+  background-color:  hsl(237, 63%, 64%) ;
+  color: white;  
+}
+
+.professional input[type="button"] {
+  background-color: white;
+  color: hsl(237, 63%, 64%);
+}
+.professional .storage p {
+  border-top: 1px solid white ;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(237, 63%, 64%);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input:checked + .slider {
+    background-color:  #ccc;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  input:checked + .slider:before {
+   -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
+
+  .pricing {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+    font-weight: 700;
+}
+span.monthly {
+  display: block;
+    position: absolute;
+    visibility: visible;
+    font-size: 2em;
+    left: 28%;
+}
+span.yearly {
+  display: block;
+    position: relative;
+    visibility: hidden;
+    font-size: 2em;
+    margin-bottom: 8%;
+}
+.swithCtl {
+  margin: auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+p, h2, h1 {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 15%;
+  margin-bottom: 10%;
+  font-weight: 700;
+}
+h2 {
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+input[type="button"] {
+  display: block;
+  margin: auto;  
+}
+
+
+@media only screen and (min-width: 490px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+  }
+  .basic, .professional, .master {
+    width: 45%;
+}
+}
+
+@media only screen and (min-width: 961px){
+  h1 {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.swithCtl {  
+  width: 35%;  
+  justify-content: space-evenly;
+}
+  .basic, .professional, .master {
+    width: 33%;
+}
+ main {
+   width: 90%;
+   margin: auto;
+
+ }
+ .professional {
+   height: 75vh;
+   margin-top: 3%;
+ }
+ .professional h2 {
+  margin-top: 10%;
+}
+ .basic, .master {
+  height: 65vh;
+  margin-top: 6%;
+}
+.card input[type="button"] {  
+  margin-top: 5%;
+  height: 7vh;
+}
+.professional input[type="button"] {
+  
+}
+}
